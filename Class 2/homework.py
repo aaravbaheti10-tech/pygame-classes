@@ -7,24 +7,9 @@ averagegrade= totalgrade/3
 print("your total grade is:",totalgrade)
 print("the averge of your grade is:",averagegrade)
 #------------------------------------------------------------
-#assignment no.2
-principal=int(input("what is the amount?"))
-rate=int(input("what is the rate of intrest?"))
-time=int(input("how long is it?"))
-total=principal*rate*time/100
-print("your total is:",total)
+
 #----------------------------------------------------------- 
-#assignmet no.3
-unit=int(input("how many units have you used:"))
-price=0
-if unit < 100:
-    price= unit * 5
-elif unit <200:
-    price= unit* 7
-elif unit > 200:
-    price = unit* 10
-print("each unit will cost:",price/unit)
-print ("the price is:",price)
+
 #----------------------------------------------------------
 #assignment no.4
 number=int(input("which number would you like to check?"))
@@ -41,12 +26,16 @@ print(square,"is your number squared")
 print(cubed,"is your number cubed")
 #----------------------------------------------------------
 #bonus challenge
-grade=int(input("enter your grade:"))
-if grade >90:
+mgrade= int(input("what is your math grade?"))
+biograde=int(input("whaat is your bio grade?"))
+litrgade=int(input("what is your english grade?"))
+totalgrade= mgrade+biograde+litrgade
+avggrade= totalgrade/3
+if avggrade<= 100 or avggrade>=90:
     print("you got an A!")
-elif grade > 75:
-    print("you got a B!")
-elif grade > 50:
+elif avggrade <90 or avggrade >=75:
+    print ("you got an B!")
+elif avggrade <75 or avggrade >= 50:
     print("you got a C")
-elif grade < 50:
+elif avggrade <50:
     print("you have failed")
